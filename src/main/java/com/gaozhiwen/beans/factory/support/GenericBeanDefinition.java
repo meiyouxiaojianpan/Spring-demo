@@ -11,7 +11,7 @@ public class GenericBeanDefinition implements BeanDefinition {
     private String beanClassName;
     private boolean singleton = true;
     private boolean prototype = false;
-    private String scope = "SCOPE_DEFAULT";
+    private String scope = SCOPE_DEFAULT;
 
     public GenericBeanDefinition(String id, String beanClassName) {
         this.id = id;
