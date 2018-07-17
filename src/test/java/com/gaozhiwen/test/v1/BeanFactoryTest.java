@@ -3,7 +3,7 @@ package com.gaozhiwen.test.v1;
 import com.gaozhiwen.beans.BeanDefinition;
 import com.gaozhiwen.beans.factory.BeanCreationException;
 import com.gaozhiwen.beans.factory.BeanDefinitionStoreException;
-import com.gaozhiwen.beans.factory.support.DefaultBeanFactoryDefault;
+import com.gaozhiwen.beans.factory.support.DefaultBeanFactory;
 import com.gaozhiwen.beans.factory.xml.XmlBeanDefinitionReader;
 import com.gaozhiwen.core.io.ClassPathResource;
 import com.gaozhiwen.service.v1.PetStoreService;
@@ -18,12 +18,12 @@ import static org.junit.Assert.*;
 */
 public class BeanFactoryTest {
 
-    DefaultBeanFactoryDefault factory = null;
+    DefaultBeanFactory factory = null;
     XmlBeanDefinitionReader reader = null;
 
     @Before
     public void setUp() {
-        factory = new DefaultBeanFactoryDefault();
+        factory = new DefaultBeanFactory();
         reader = new XmlBeanDefinitionReader(factory);
     }
     @Test

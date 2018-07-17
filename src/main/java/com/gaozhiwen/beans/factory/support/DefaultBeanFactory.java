@@ -12,13 +12,13 @@ import java.util.concurrent.ConcurrentHashMap;
 *@author : gaozhiwen
 *@date : 2018/6/9
 */
-public class DefaultBeanFactoryDefault extends DefaultSingletonBeanRegistry implements ConfigurableBeanFactory, BeanDefinitionRegistry {
+public class DefaultBeanFactory extends DefaultSingletonBeanRegistry implements ConfigurableBeanFactory, BeanDefinitionRegistry {
 
     private final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>();
     private ClassLoader beanClassLoader;
 
 
-    public DefaultBeanFactoryDefault() {
+    public DefaultBeanFactory() {
     }
 
     public Object getBean(String beanId) {

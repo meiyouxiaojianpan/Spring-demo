@@ -1,6 +1,6 @@
 package com.gaozhiwen.context.support;
 
-import com.gaozhiwen.beans.factory.support.DefaultBeanFactoryDefault;
+import com.gaozhiwen.beans.factory.support.DefaultBeanFactory;
 import com.gaozhiwen.beans.factory.xml.XmlBeanDefinitionReader;
 import com.gaozhiwen.context.ApplicationContext;
 import com.gaozhiwen.core.io.Resource;
@@ -11,11 +11,11 @@ import com.gaozhiwen.util.ClassUtils;
 *@date : 2018/7/6
 */
 public abstract class AbstractApplicationContext implements ApplicationContext{
-    private DefaultBeanFactoryDefault factory;
+    private DefaultBeanFactory factory;
     private ClassLoader beanClassLoader;
 
     public AbstractApplicationContext(String configFile) {
-        factory = new DefaultBeanFactoryDefault();
+        factory = new DefaultBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
         Resource resource = this.getResourceByPath(configFile);
         reader.loadBeanDefinition(resource);
