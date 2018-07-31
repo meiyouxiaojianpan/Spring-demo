@@ -16,7 +16,7 @@ public class FileSystemResource implements Resource {
     private File file;
 
     public FileSystemResource(String path) {
-        Assert.NotNull(path, "path not be null!");
+        Assert.notNull(path, "path not be null!");
         this.path = path;
         this.file = new File(path);
     }

@@ -1,6 +1,11 @@
 package com.gaozhiwen.beans.factory.support;
 
 import com.gaozhiwen.beans.BeanDefinition;
+import com.gaozhiwen.beans.PropertyValue;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
 *@author : gaozhiwen
 *@date : 2018/6/9
@@ -12,6 +17,8 @@ public class GenericBeanDefinition implements BeanDefinition {
     private boolean singleton = true;
     private boolean prototype = false;
     private String scope = SCOPE_DEFAULT;
+
+    List<PropertyValue> propertyValues = new ArrayList<PropertyValue>();
 
     public GenericBeanDefinition(String id, String beanClassName) {
         this.id = id;
@@ -38,5 +45,9 @@ public class GenericBeanDefinition implements BeanDefinition {
 
     public String getBeanClassName() {
         return this.beanClassName;
+    }
+
+    public List<PropertyValue> getPropertyValues() {
+        return this.propertyValues;
     }
 }

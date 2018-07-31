@@ -1,4 +1,7 @@
 package com.gaozhiwen.beans;
+
+import java.util.List;
+
 /**
 *@author : gaozhiwen
 *@date : 2018/6/9
@@ -37,4 +40,10 @@ public interface BeanDefinition {
      * @return
      */
     String getBeanClassName();
+
+    /**
+     * PropertyValue List
+     * @return
+     */
+    List<PropertyValue> getPropertyValues();
 }

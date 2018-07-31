@@ -4,7 +4,7 @@ package com.gaozhiwen.util;
 *@date : 2018/7/3
 */
 public abstract class Assert {
-    public static void NotNull(Object object, String message) {
+    public static void notNull(Object object, String message) {
         if (object == null) {
             throw new IllegalArgumentException(message);
         }
